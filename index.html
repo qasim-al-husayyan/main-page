@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الموقع الشخصي للأستاذ قاسم محمد الحسيان - خبير في الأطراف الاصطناعية والأجهزة التقويمية" />
+  <meta name="keywords" content="قاسم الحسيان, أطراف اصطناعية, أجهزة تقويمية, تأهيل, فجر الأمل" />
+  <meta name="author" content="قاسم محمد الحسيان" />
+  <title>أ. قاسم محمد الحسيان | الموقع الشخصي</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Fontsource Arabic Font (Cairo) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/cairo@latest/arabic-400-normal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/cairo@latest/arabic-600-normal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/cairo@latest/arabic-700-normal.css" />
+
+  <style>
+    :root {
+      --primary: #223e59;
+      --primary-dark: #182d42;
+      --accent: #bc9d61;
+      --accent-dark: #a58747;
+      --white: #ffffff;
+      --light-bg: #f7f8fa;
+      --text: #2c3e50;
+      --text-light: #5a6c7d;
+      --shadow-sm: 0 2px 8px rgba(34, 62, 89, 0.08);
+      --shadow-md: 0 8px 24px rgba(34, 62, 89, 0.12);
+      --shadow-lg: 0 16px 40px rgba(34, 62, 89, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cairo', 'Tahoma', Arial, sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background-color: var(--light-bg);
+      direction: rtl;
+    }
+
+    /* ============ HEADER ============ */
+    header {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      padding: 2rem 1.5rem 2.5rem;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(188, 157, 97, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(188, 157, 97, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+      transition: transform 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      letter-spacing: 0.5px;
+    }
+
+    header .subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .gold-line {
+      width: 80px;
+      height: 3px;
+      background: var(--accent);
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
+
+    /* ============ CONTAINER ============ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* ============ SECTIONS ============ */
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2.5rem;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s ease;
+      border-top: 4px solid var(--accent);
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-size: 1.9rem;
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* ============ ABOUT SECTION ============ */
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      line-height: 2;
+      text-align: justify;
+      color: var(--text);
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .personal-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .personal-image-frame {
+      position: relative;
+      width: 280px;
+      height: 340px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--accent);
+      background: var(--light-bg);
+    }
+
+    .personal-image-frame::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 100%;
+      height: 100%;
+      border: 3px solid var(--accent);
+      border-radius: 18px;
+      z-index: -1;
+    }
+
+    .personal-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ============ SOCIAL SECTION ============ */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 1rem 1.2rem;
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      transition: right 0.4s ease;
+    }
+
+    .social-btn:hover::before {
+      right: 0;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .social-btn i {
+      font-size: 1.6rem;
+    }
+
+    .btn-facebook-ar { background: linear-gradient(135deg, #1877f2, #0d5ec7); }
+    .btn-facebook-en { background: linear-gradient(135deg, #1877f2, #0d5ec7); }
+    .btn-instagram  { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .btn-youtube    { background: linear-gradient(135deg, #ff0000, #c40000); }
+    .btn-whatsapp   { background: linear-gradient(135deg, #25d366, #128c7e); }
+
+    /* ============ PODCAST SECTION ============ */
+    .podcast-placeholder {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--accent);
+    }
+
+    .podcast-inner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .podcast-inner i {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.85; }
+    }
+
+    .podcast-inner h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .podcast-inner p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    /* ============ MEDIA REPORTS SECTION ============ */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      background: #000;
+      transition: all 0.3s ease;
+    }
+
+    .video-container:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .video-container iframe,
+    .video-container .video-placeholder {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .video-placeholder i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .video-placeholder span {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .copyright {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .copyright i {
+      margin: 0 0.3rem;
+      color: var(--accent);
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 900px) {
+      .about-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .personal-image-wrapper {
+        order: -1;
+      }
+
+      .personal-image-frame {
+        width: 240px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .logo {
+        width: 110px;
+      }
+
+      section {
+        padding: 1.8rem 1.3rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .about-text {
+        font-size: 1rem;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .social-btn {
+        padding: 0.9rem 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .social-btn i {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1.5rem 1rem 2rem;
+      }
+
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      section {
+        padding: 1.5rem 1rem;
+        border-radius: 14px;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="header-content">
+      <img src="logo.png" alt="شعار قاسم محمد الحسيان" class="logo" />
+      <h1>أ. قاسم محمد الحسيان</h1>
+      <div class="gold-line"></div>
+      <p class="subtitle">خبير في الأطراف الاصطناعية والأجهزة التقويمية</p>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about">
+      <h2>نبذة تعريفية</h2>
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>عربي سوري من مواليد درعا – الشجرة 1985.</p>
+          <p>
+            خبير متخصص ورائد في مجال الأطراف الاصطناعية والأجهزة التقويمية، أمتلك خبرة مهنية تمتد لأكثر من 15 عامًا في الرعاية الصحية والإدارة الطبية. مدير المركز الطبي الشامل، ومؤسس ورئيس مجلس إدارة مؤسسة فجر الأمل لرعاية وتأهيل ذوي الاحتياجات الخاصة، حيث قدت مبادرات استراتيجية مؤثرة، أبرزها مشروع "حياة" للأطراف الاصطناعية.
+          </p>
+          <p>
+            أتمتع بقدرات قيادية متقدمة في إدارة وتطوير الفرق الطبية والفنية، مع سجل حافل في تحسين جودة الخدمات الصحية ومواءمتها مع أعلى المعايير المهنية. كما أن لدي رؤية استراتيجية ترتكز على الابتكار وتبني أحدث التقنيات في مجال الأطراف الاصطناعية، بما يضمن تقديم رعاية صحية متكاملة، عالية الكفاءة، ومتمحورة حول احتياجات ورضى المرضى.
+          </p>
+        </div>
+        <div class="personal-image-wrapper">
+          <div class="personal-image-frame">
+            <img src="personal.png" alt="أ. قاسم محمد الحسيان" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOCIAL SECTION ============ -->
+    <section id="social">
+      <h2>تابع آخر المستجدات والمنشورات</h2>
+      <div class="social-grid">
+        <a href="#" class="social-btn btn-facebook-ar" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>فيسبوك عربي</span>
+        </a>
+        <a href="#" class="social-btn btn-facebook-en" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f"></i>
+          <span>Facebook English</span>
+        </a>
+        <a href="#" class="social-btn btn-instagram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+          <span>إنستغرام</span>
+        </a>
+        <a href="#" class="social-btn btn-youtube" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube"></i>
+          <span>يوتيوب</span>
+        </a>
+        <a href="#" class="social-btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>واتساب للأعمال</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PODCAST SECTION ============ -->
+    <section id="podcast">
+      <h2>حلقة البودكاست</h2>
+      <div class="podcast-placeholder">
+        <div class="podcast-inner">
+          <i class="fa-solid fa-podcast"></i>
+          <h3>قريباً</h3>
+          <p>سيتم تضمين فيديو الحلقة هنا</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEDIA REPORTS SECTION ============ -->
+    <section id="media">
+      <h2>تقارير إعلامية</h2>
+      <div class="media-grid">
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 1</span>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 2</span>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 3</span>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 4</span>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 5</span>
+          </div>
+        </div>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fa-solid fa-video"></i>
+            <span>تقرير إعلامي 6</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">
+        <i class="fa-regular fa-copyright"></i>
+        جميع الحقوق محفوظة 2026
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
